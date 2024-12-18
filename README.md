@@ -24,13 +24,12 @@
 
 ---
 
-## 環境需求
+## 環境需求  (詳見requirement.txt)
 - Python 3.x
 - PyTorch 及其相依套件
-- torchvision（已使用部分模型與功能）
+- torchvision
 - Pillow（處理影像）
 - numpy、matplotlib、seaborn、scikit-learn（混淆矩陣與數據分析）
-- torchsummary、torchviz（選用，輔助模型摘要與視覺化）
 - GPU（如有，則可使用加速訓練）
 
 ---
@@ -141,9 +140,10 @@ project_root/
 --- 
 
 ## 參考資料
-[1] Yuan, Z.-Y. (2018). 運用深度神經網絡實現驗證碼識別 [Master's thesis, National Taiwan University]. NTU Repository.
-[2] Shi, B., Bai, X., & Yao, C. (2015). An end-to-end trainable neural network for image-based sequence recognition and its application to scene text recognition. arXiv preprint arXiv:1507.05717.
-[3] Noury, Z., & Rezaei, M. (2020). Deep-CAPTCHA: A deep learning based CAPTCHA solver for vulnerability assessment. arXiv preprint arXiv:2006.08296v2.
-[4] qjadud1994. (2020). CRNN-Keras [Source code]. GitHub. https://github.com/qjadud1994/CRNN-Keras
-[5] 老農的博客. (2021). 寫給程式設計師的機器學習入門(八) - 卷積神經網路(CNN) - 圖片分類和驗證碼識別. https://303248153.github.io/ml-08/
+
+1. Yuan, Z.-Y. (2018). 運用深度神經網絡實現驗證碼識別 [Master's thesis, National Taiwan University]. NTU Repository.
+2. Shi, B., Bai, X., & Yao, C. (2015). An end-to-end trainable neural network for image-based sequence recognition and its application to scene text recognition. arXiv preprint arXiv:1507.05717.
+3. Noury, Z., & Rezaei, M. (2020). Deep-CAPTCHA: A deep learning based CAPTCHA solver for vulnerability assessment. arXiv preprint arXiv:2006.08296v2.
+4. qjadud1994. (2020). CRNN-Keras [Source code]. GitHub. [https://github.com/qjadud1994/CRNN-Keras](https://github.com/qjadud1994/CRNN-Keras)
+5. 老農的博客. (2021). 寫給程式設計師的機器學習入門(八) - 卷積神經網路(CNN) - 圖片分類和驗證碼識別. [https://303248153.github.io/ml-08/](https://303248153.github.io/ml-08/)
 
