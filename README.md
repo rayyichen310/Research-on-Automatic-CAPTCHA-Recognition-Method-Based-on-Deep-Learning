@@ -1,8 +1,19 @@
 # Research on Automatic CAPTCHA Recognition Method Based on Deep Learning
+
+
+---
+
+# **Summary**
+
+**This program leverages deep learning technologies (CRNN + GRU) to implement an automatic CAPTCHA recognition workflow. The functionalities include:** 
+
+- **Recognition of 4 to 6-digit Verification Codes:**   Capable of accurately identifying CAPTCHA codes consisting of 4 to 6 numerical characters.
+  
+- **Support for CAPTCHAs from Various Generation Methods and Websites:**   Able to recognize and process CAPTCHA codes that are generated using different techniques or originate from different websites, ensuring adaptability to diverse CAPTCHA formats.
+
+---
  
 ## Introduction
-
-This program leverages deep learning technologies (CRNN + GRU) to implement an automatic CAPTCHA recognition workflow. The functionalities include:
 
 ### Data Preparation (`prepare`)
 Automatically splits the original CAPTCHA images into training, validation, and testing sets, and saves them in `.pt` file format compatible with PyTorch.
@@ -146,8 +157,18 @@ This program example provides a complete workflow for CAPTCHA data processing, m
 
 # 基於深度學習的驗證碼自動識別方法研究
 
-## 簡介
+---
+
+# **概述**
 本程式以深度學習技術（CRNN + GRU）為核心，實現驗證碼自動辨識流程。包含的功能如下：
+- **可以辨識4至6位數驗證碼：** 本程式能夠準確識別包含4至6位數字的驗證碼。
+ 
+- **支持來自不同生成方式或網站的驗證碼：** 能夠辨識由不同生成技術或來自不同網站的驗證碼，確保適應多樣化的CAPTCHA格式。
+
+---
+
+## 簡介
+
 
 1. **資料準備 (prepare)**  
    將原始驗證碼圖片自動分割為訓練集、驗證集與測試集，並轉存為 PyTorch 可讀取的 `.pt` 檔案格式。
