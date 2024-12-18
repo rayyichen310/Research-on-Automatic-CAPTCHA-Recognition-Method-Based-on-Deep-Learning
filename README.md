@@ -24,17 +24,14 @@
 
 ---
 
-## Requirements 
-- Python 3.12
-- torch==2.5.1
-- torchvision==0.20.1
-- torchaudio==2.5.1
-- torchsummary==1.5.1
-- torchviz==0.0.2
-
-- Pillow (影像處理)
-- numpy、matplotlib、seaborn、scikit-learn (用於混淆矩陣與數據分析)
-- cuda 12.4（加速訓練）
+環境需求
+Python 3.x
+PyTorch 及其相依套件
+torchvision（已使用部分模型與功能）
+Pillow（處理影像）
+numpy、matplotlib、seaborn、scikit-learn（混淆矩陣與數據分析）
+torchsummary、torchviz（選用，輔助模型摘要與視覺化）
+GPU（如有，則可使用加速訓練）
 
 ---
 
