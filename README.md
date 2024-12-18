@@ -49,19 +49,12 @@
 ```
 project_root/
 ├─ pretrain/
-│  ├─ img/                # 預訓練資料集圖片
+│  ├─ img/                # 預訓練資料集的圖片放置處
 │  ├─ model/              # 預訓練模型存放處
-│  └─ output/             # 預訓練過程產生的紀錄與結果
-├─ new/
-│  ├─ img-1/
-│  │  ├─ img/             # 第一組新圖片資料集
-│  │  ├─ model/           # 該組訓練後模型存放處
-│  │  └─ output/
-│  ├─ img-2/
-│  │  ├─ img/             # 第二組新圖片資料僅用於測試模型辨識能力,train_classifier不會讀取此資料夾!)
+│  └─ outpu效能測試，train_classifier不會讀取此資料夾!
 │  ├─ model/
 │  └─ output/
-└─ predict/                # 用於預測的圖片放置處
+└─ predict/                # 要進行預測的圖片放置處
 ```
 
 程式在執行時會依據上述結構，自動從對應的資料夾中讀取與存放模型及資料。
