@@ -1,5 +1,5 @@
 # Research on Automatic CAPTCHA Recognition Method Based on Deep Learning
-   
+
 ## Introduction
 
 This program leverages deep learning technologies (CRNN + GRU) to implement an automatic CAPTCHA recognition workflow. The functionalities include:
