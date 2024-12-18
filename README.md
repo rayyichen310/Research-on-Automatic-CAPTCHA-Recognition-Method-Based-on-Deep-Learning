@@ -1,6 +1,6 @@
 # Research on Automatic CAPTCHA Recognition Method Based on Deep Learning
 
-
+ 
 ---
 
 # **Summary**
