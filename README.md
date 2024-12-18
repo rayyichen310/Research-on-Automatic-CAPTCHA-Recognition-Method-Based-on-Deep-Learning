@@ -58,14 +58,7 @@ project_root/
 │  │  ├─ model/           # 該組訓練後模型存放處
 │  │  └─ output/
 │  ├─ img-2/
-│  │  ├─ img/             # 第二組新圖片資料集
-│  │  ...
-│  ├─ classifier/         
-│  │  ├─ model/           # 分類模型存放處
-│  │  └─ output/
-│  └─ ...  (其他 img-N 資料夾)
-├─ train-evaluate/
-│  ├─ img/                (用於效能測試,train_classifier不會讀取此資料夾!)
+│  │  ├─ img/             # 第二組新圖片資料僅用於測試模型辨識能力,train_classifier不會讀取此資料夾!)
 │  ├─ model/
 │  └─ output/
 └─ predict/                # 用於預測的圖片放置處
