@@ -1,7 +1,150 @@
+# Research on Automatic CAPTCHA Recognition Method Based on Deep Learning
+
+## Introduction
+
+This program leverages deep learning technologies (CRNN + GRU) to implement an automatic CAPTCHA recognition workflow. The functionalities include:
+
+### Data Preparation (`prepare`)
+Automatically splits the original CAPTCHA images into training, validation, and testing sets, and saves them in `.pt` file format compatible with PyTorch.
+
+### Training OCR Model (`train`)
+Trains an OCR model using the CRNN + GRU architecture to automatically recognize the textual content of CAPTCHA images.
+
+### Training Classification Model (`train_classifier`)
+When there are multiple training datasets from different sources (e.g., multiple `img-N` folders), a classification model can be trained to identify the source dataset of each CAPTCHA. Subsequently, the corresponding OCR model for that source is used for recognition.
+
+### Evaluating Model (`evaluate`)
+Evaluates the trained model using the test set, outputs character-level and sequence-level accuracy, and generates a confusion matrix.
+
+### Prediction (`predict`)
+Performs predictions on images in the `predict` folder. The program first uses the classification model to determine which OCR model to apply to each image, then outputs the recognition results to `predict/predictions.csv`.
+
+### Plotting Training Curves (`plot`)
+Reads the loss and accuracy records from the training CSV files and plots them as curves using matplotlib and seaborn.
+
+## Environment Requirements (See `requirement.txt` for details)
+- Python 3.x
+- PyTorch and its dependencies
+- torchvision
+- Pillow (for image processing)
+- numpy, matplotlib, seaborn, scikit-learn (for confusion matrix and data analysis)
+- GPU (optional, for accelerated training)
+
+### Experimental Environment
+- AMD Ryzen R9 5900HS
+- Nvidia RTX 3060 Laptop
+- Windows 11
+
+## Project Directory Structure
+
+The default project directory structure is as follows:
+
+```
+project_root/
+├─ pretrain/
+│  ├─ img/                # Pretraining dataset images
+│  ├─ model/              # Models storage
+│  └─ output/             # Storage for .csv files and confusion matrices
+├─ new/
+│  ├─ img-1/
+│  │  ├─ img/             # First CAPTCHA dataset
+│  │  ├─ model/           
+│  │  └─ output/
+│  ├─ img-2/
+│  │  ├─ img/             # Second CAPTCHA dataset
+│  │  ...
+│  ├─ classifier/         
+│  │  ├─ model/           
+│  │  └─ output/
+│  └─ ...  (Other `img-N` folders)
+├─ train-evaluate/
+│  ├─ img/                # Used only for performance testing; `train_classifier` does not read this folder!
+│  ├─ model/
+│  └─ output/
+└─ predict/                # Folder for images to be predicted
+```
+
+When executing, the program automatically reads from and stores models and data based on the above structure.
+
+## Usage Steps
+
+### 1. Environment Setup
+Run `env.ipynb` to download the required datasets and create the necessary directories.
+
+### 2. Data Preparation (`prepare`)
+Included in the `train` functionality; no need to execute separately.
+- Place the CAPTCHA images to be trained into the corresponding folders (e.g., `pretrain/img` or `new/img-1/img`).
+- The image filenames (excluding the extension) represent the CAPTCHA text. For example, `abc1.png` indicates that the CAPTCHA text is `abc1`.
+- Run the program and select `prepare` mode:
+  ```
+  Please enter mode (prepare|train|train_classifier|evaluate|predict|plot): prepare
+  ```
+- Follow the prompts to select the target folder. The program will automatically split the data into `train`, `valid`, and `test` sets and save them in `.pt` format.
+
+### 3. Training OCR Model (`train`)
+- Ensure data preparation is completed.
+- Select `train` mode:
+  ```
+  Please enter mode (prepare|train|train_classifier|evaluate|predict|plot): train
+  ```
+- The program will ask whether to use pre-trained weights from `pretrain/model/` and which dataset folder to train on.
+- You can choose to train with all or a subset of images. (Before using the pre-trained model, first train all CAPTCHAs in the `pretrain` folder!)
+- After training, the program saves the best model weights to the corresponding `model` folder and records the training process in a CSV file within the `output` folder.
+
+### 4. Training Classification Model (`train_classifier`)
+If there are multiple `img-N` folders, you can first train a classification model to identify the source dataset of each image, then use the corresponding OCR model for recognition.
+- Select `train_classifier` mode:
+  ```
+  Please enter mode (prepare|train|train_classifier|evaluate|predict|plot): train_classifier
+  ```
+- Follow the prompts to input the number of images to use. The trained classification model will be saved in `new/classifier/model/`.
+
+### 5. Evaluating Model (`evaluate`)
+After training, use `evaluate` mode to test the model's performance on the test set:
+```
+Please enter mode (prepare|train|train_classifier|evaluate|predict|plot): evaluate
+```
+- Select the corresponding model. The program will output character-level and sequence-level accuracy and generate a confusion matrix.
+
+### 6. Prediction (`predict`)
+- Place the images to be recognized in the `predict` folder.
+- Run the program and select `predict` mode:
+  ```
+  Please enter mode (prepare|train|train_classifier|evaluate|predict|plot): predict
+  ```
+- The program first uses the trained classification model (`new/classifier/model/classifier_model.pt`) to determine which OCR model to use, then performs CAPTCHA recognition. Finally, the results are output to `predict/predictions.csv`.
+
+### 7. Plotting Training Curves (`plot`)
+Use `plot` mode to visualize the loss and accuracy curves from the training records in the CSV files:
+```
+Please enter mode (prepare|train|train_classifier|evaluate|predict|plot): plot
+```
+- Select the corresponding CSV file to display the loss and accuracy curves.
+
+## Important Notes
+- CAPTCHA image filenames should contain only `[a-z 0-9]` characters, and the length should be between 4 to 6 characters. Images not conforming to this specification will be excluded from training.
+- For detailed explanations and experimental procedures, please refer to the PDF document.
+
+## Conclusion
+This program example provides a complete workflow for CAPTCHA data processing, model training, evaluation, prediction, and result visualization. Users can adjust the code and architecture based on their specific needs to achieve better CAPTCHA recognition performance and customized applications.
+
+## References
+
+- **Yuan, Z.-Y.** (2018). 運用深度神經網絡實現驗證碼識別 [Master's thesis, National Taiwan University]. NTU Repository.
+
+- **Shi, B., Bai, X., & Yao, C.** (2015). An end-to-end trainable neural network for image-based sequence recognition and its application to scene text recognition. *arXiv preprint* arXiv:1507.05717.
+
+- **Noury, Z., & Rezaei, M.** (2020). Deep-CAPTCHA: A deep learning based CAPTCHA solver for vulnerability assessment. *arXiv preprint* arXiv:2006.08296v2.
+
+-  **qjadud1994.** (2020). CRNN-Keras [Source code]. GitHub. [https://github.com/qjadud1994/CRNN-Keras](https://github.com/qjadud1994/CRNN-Keras)
+- **老農的博客.** (2021). 寫給程式設計師的機器學習入門(八) - 卷積神經網路(CNN) - 圖片分類和驗證碼識別. [https://303248153.github.io/ml-08/](https://303248153.github.io/ml-08/)
+
+--- 
+---   
+  
+  
 
 # 基於深度學習的驗證碼自動識別方法研究
-
----
 
 ## 簡介
 本程式以深度學習技術（CRNN + GRU）為核心，實現驗證碼自動辨識流程。包含的功能如下：
@@ -82,7 +225,7 @@ project_root/
 - 執行 `env.ipynb` 以下載所需數據集並建立相關資料夾。
 
 ### 2. 資料準備 (prepare) 
-- 已包含在train功能中 不須先執行
+已包含在train功能中 不須先執行
 - 將待訓練的驗證碼圖片放入對應的資料夾（例如 `pretrain/img` 或 `new/img-1/img`）。
 - 圖片檔名（不含副檔名）即為驗證碼文字內容。例如：`abc1.png` 表示該驗證碼文字為 `abc1`。
 - 執行程式並選擇 `prepare` 模式：
