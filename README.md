@@ -54,11 +54,11 @@ project_root/
 │  └─ output/             # .csv及混淆矩陣存放位置
 ├─ new/
 │  ├─ img-1/
-│  │  ├─ img/             # 第一組新圖片資料集
-│  │  ├─ model/           #
+│  │  ├─ img/             # 第一組驗證碼資料集
+│  │  ├─ model/           
 │  │  └─ output/
 │  ├─ img-2/
-│  │  ├─ img/             # 第二組新圖片資料集
+│  │  ├─ img/             # 第二組驗證碼資料集
 │  │  ...
 │  ├─ classifier/         
 │  │  ├─ model/           
