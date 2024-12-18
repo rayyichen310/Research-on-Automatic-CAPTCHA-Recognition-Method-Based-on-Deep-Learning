@@ -56,7 +56,7 @@ project_root/
 │  │  └─ output/
 │  └─ ...  (其他 img-N 資料夾)
 ├─ train-evaluate/
-│  ├─ img/                # 用於測試模型效能(已作廢)
+│  ├─ img/                可自行放入想訓練的驗證碼自行放入想訓練的驗證碼)
 │  ├─ model/
 │  └─ output/
 └─ predict/                # 用於預測的圖片放置處
