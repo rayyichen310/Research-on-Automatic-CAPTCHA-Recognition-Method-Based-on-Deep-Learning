@@ -24,14 +24,25 @@
 
 ---
 
-## 環境需求
-- Python 3.x
-- PyTorch 及相關依賴套件
-- torchvision
+## requirements 
+- Python 3.12
+- torch==2.5.1
+- torchvision==0.20.1
+- torchaudio==2.5.1
+- torchsummary==1.5.1
+- torchviz==0.0.2
+
 - Pillow (影像處理)
 - numpy、matplotlib、seaborn、scikit-learn (用於混淆矩陣與數據分析)
-- GPU（若有則可加速訓練過程）
+- cuda 12.4（）
 
+---
+
+##實驗環境
+- AMD Ryzen R9 5900HS
+- Nvidia RTX 3060 laptop
+- Windows 11
+  
 ---
 
 ## 專案目錄結構
