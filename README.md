@@ -34,7 +34,7 @@
 
 - Pillow (影像處理)
 - numpy、matplotlib、seaborn、scikit-learn (用於混淆矩陣與數據分析)
-- cuda 12.4（）
+- cuda 12.4（加速訓練）
 
 ---
 
