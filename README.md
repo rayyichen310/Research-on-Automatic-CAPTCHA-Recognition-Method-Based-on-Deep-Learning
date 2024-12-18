@@ -1,8 +1,6 @@
 # Research-on-Automatic-CAPTCHA-Recognition-Methods-Based-on-Deep-Learning-Abstract
 基於深度學習的驗證碼自動識別方法研究
 
-下面為該程式碼的使用說明與 README（中文）：
-
 ---
 
 # README
