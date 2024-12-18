@@ -5,7 +5,7 @@
 
 # **Summary**
 
-**This program leverages deep learning technologies (CNN + GRU) to implement an automatic CAPTCHA recognition workflow. The functionalities include:** 
+**This program leverages deep learning technologies (ResNet-18 + GRU) to implement an automatic CAPTCHA recognition workflow. The functionalities include:** 
 
 - **Recognition of 4 to 6-digit Verification Codes:**   Capable of accurately identifying CAPTCHA codes consisting of 4 to 6 numerical characters.
   
@@ -160,7 +160,7 @@ This program example provides a complete workflow for CAPTCHA data processing, m
 ---
 
 # **概述**
-本程式以深度學習技術（CNN + GRU）為核心，實現驗證碼自動辨識流程。包含的功能如下：
+本程式以深度學習技術(ResNet-18 + GRU)為核心，實現驗證碼自動辨識流程。包含的功能如下：
 - **可以辨識4至6位數驗證碼：** 本程式能夠準確識別包含4至6位數字的驗證碼。
  
 - **支持來自不同生成方式或網站的驗證碼：** 能夠辨識由不同生成技術或來自不同網站的驗證碼，確保適應多樣化的CAPTCHA格式。
