@@ -44,7 +44,7 @@ project_root/
 │  │  └─ output/
 │  └─ ...  (其他 img-N 資料夾)
 ├─ train-evaluate/
-│  ├─ img/                # 用於最終評估訓練結果的圖片資料集
+│  ├─ img/                # 用於測試模型效能的圖片資料集(作廢)
 │  ├─ model/
 │  └─ output/
 └─ predict/                # 要進行預測的圖片放置處
