@@ -69,7 +69,7 @@ project_root/
 ## 使用步驟
 
 ### 1. 環境建置
-- 執行 `evn.ipynb` 以下載所需數據集並建立相關資料夾。
+- 執行 `env.ipynb` 以下載所需數據集並建立相關資料夾。
 
 ### 2. 資料準備 (prepare)
 - 將待訓練的驗證碼圖片放入對應的資料夾（例如 `pretrain/img` 或 `new/img-1/img`）。
