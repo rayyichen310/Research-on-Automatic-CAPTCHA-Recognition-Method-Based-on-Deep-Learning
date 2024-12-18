@@ -24,7 +24,7 @@
 
 ---
 
-## requirements 
+## Requirements 
 - Python 3.12
 - torch==2.5.1
 - torchvision==0.20.1
