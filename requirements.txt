@@ -1,0 +1,10 @@
+torch==2.5.1
+torchvision==0.20.1
+torchaudio==2.5.1
+torchsummary==1.5.1
+torchviz==0.0.2
+Pillow
+matplotlib
+seaborn
+scikit-learn
+numpy
