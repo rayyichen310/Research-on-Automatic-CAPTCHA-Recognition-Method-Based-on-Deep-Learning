@@ -77,7 +77,7 @@ project_root/
    ```
    請輸入模式 (prepare|train|train_classifier|evaluate|predict|plot): train
    ```
-   接著程式會詢問是否使用預訓練模型 (`pretrain/model/`) 中的權重開始訓練，以及選擇哪一組資料夾來訓練，並可選擇使用全部或部分圖片進行訓練。  
+   接著程式會詢問是否使用預訓練模型 (`pretrain/model/`) 中的權重開始訓練，以及選擇哪一組資料夾來訓練，並可選擇使用全部或部分圖片進行訓練。(使用預訓練模型前請先訓練pretrain資料夾中所有驗證碼!)  
    完成後，程式將自動進行訓練並記錄過程至 CSV 檔案，同時在對應的 `model` 資料夾中存放最佳的模型權重。
 
 5. **訓練分類模型 (train_classifier)**
