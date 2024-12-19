@@ -11,6 +11,10 @@
   
 - **Support for CAPTCHAs from Various Generation Methods and Websites:**   Able to recognize and process CAPTCHA codes that are generated using different techniques or originate from different websites, ensuring adaptability to diverse CAPTCHA formats.
 
+
+  ![image](https://github.com/user-attachments/assets/ce4a03a2-376e-4c68-ac3a-7526e3ca21ef)  ![image](https://github.com/user-attachments/assets/6100cdd3-9411-4dcf-b01b-f3162a879a26) 
+
+
 ---
  
 ## Introduction
