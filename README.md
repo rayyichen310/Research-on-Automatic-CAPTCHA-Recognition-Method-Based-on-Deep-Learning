@@ -3,7 +3,7 @@
  
 ---
 
-# **Summary**
+## **Summary**
 
 **This program leverages deep learning technologies (ResNet-18 + GRU) to implement an automatic CAPTCHA recognition workflow. The functionalities include:** 
 
@@ -159,7 +159,7 @@ This program example provides a complete workflow for CAPTCHA data processing, m
 
 ---
 
-# **概述**
+## **概述**
 本程式以深度學習技術(ResNet-18 + GRU)為核心，實現驗證碼自動辨識流程。包含的功能如下：
 - **可以辨識4至6位數驗證碼：** 本程式能夠準確識別包含4至6位數字的驗證碼。
  
