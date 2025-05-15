@@ -23,7 +23,7 @@
 Automatically splits the original CAPTCHA images into training, validation, and testing sets, and saves them in `.pt` file format compatible with PyTorch.
 
 ### Training OCR Model (`train`)
-Trains an OCR model using the CRNN + GRU architecture to automatically recognize the textual content of CAPTCHA images.
+Trains an OCR model using the CNN + GRU architecture to automatically recognize the textual content of CAPTCHA images.
 
 ### Training Classification Model (`train_classifier`)
 When there are multiple training datasets from different sources (e.g., multiple `img-N` folders), a classification model can be trained to identify the source dataset of each CAPTCHA. Subsequently, the corresponding OCR model for that source is used for recognition.
@@ -178,7 +178,7 @@ This program example provides a complete workflow for CAPTCHA data processing, m
    將原始驗證碼圖片自動分割為訓練集、驗證集與測試集，並轉存為 PyTorch 可讀取的 `.pt` 檔案格式。
 
 2. **訓練 OCR 模型 (train)**  
-   使用 CRNN + GRU 架構訓練 OCR 模型，以自動辨識驗證碼圖像的文字內容。
+   使用 CNN + GRU 架構訓練 OCR 模型，以自動辨識驗證碼圖像的文字內容。
 
 3. **訓練分類模型 (train_classifier)**  
    當有多組不同來源的驗證碼訓練資料（例如多個 `img-N` 資料夾）時，可以先訓練分類模型以辨別該驗證碼屬於哪個資料集來源，然後再針對該來源使用對應的 OCR 模型進行辨識。
