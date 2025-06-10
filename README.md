@@ -1,6 +1,6 @@
 # Research on Automatic CAPTCHA Recognition Method Based on Deep Learning
 
----![image](https://github.com/user-attachments/assets/68e956c9-545e-43af-81e4-956c91c651da)  ![image](https://github.com/user-attachments/assets/6100cdd3-9411-4dcf-b01b-f3162a879a26) 
+![image](https://github.com/user-attachments/assets/68e956c9-545e-43af-81e4-956c91c651da)  ![image](https://github.com/user-attachments/assets/6100cdd3-9411-4dcf-b01b-f3162a879a26) 
 
 ## **Summary**
 
