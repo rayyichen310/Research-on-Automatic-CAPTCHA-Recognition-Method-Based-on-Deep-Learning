@@ -2,6 +2,8 @@
 
 ![image](https://github.com/user-attachments/assets/68e956c9-545e-43af-81e4-956c91c651da)  ![image](https://github.com/user-attachments/assets/6100cdd3-9411-4dcf-b01b-f3162a879a26) 
 
+# [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/rayyichen310/Research-on-Automatic-CAPTCHA-Recognition-Method-Based-on-Deep-Learning)
+
 ## **Summary**
 
 **This program leverages deep learning technologies (ResNet-18 + GRU) to implement an automatic CAPTCHA recognition workflow. The functionalities include:** 
